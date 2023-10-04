@@ -19,7 +19,7 @@ const ProjectCard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full min-h-[550px] relative"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -51,6 +51,9 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
+        <a href={source_code_link} target="blink" className="w-10/12 p-1 border-1 rounded-[100px] bg-[#915eff] text-xs mt-2 text-center hover:bg-violet-900 hover:text-[#fefefe] transition-all absolute bottom-6">
+          click for see this project
+        </a>
       </Tilt>
     </motion.div>
   );
@@ -61,7 +64,7 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
 
       <div className="w-full flex">
