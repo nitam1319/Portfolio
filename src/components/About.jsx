@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import ProgressBar from "@ramonak/react-progress-bar";
@@ -52,16 +52,11 @@ const ServiceCard = ({ index, title, icon, num }) => {
 };
 
 const About = () => {
-
-  
- console.log('gg' , useMediaQuery('(max-width:600px)') )
   return (
     <>
         <StarsCanvas />
 
       <motion.div variants={textVariant(0 , useMediaQuery('(max-width:600px)'))}
-       className=" mb:opacity-100"
-       style={{opacity:100}}
       >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>

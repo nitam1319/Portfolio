@@ -262,7 +262,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: '/proje/makeen.png',
+    image: 'makeen.png',
     source_code_link: "https://makeen.ir/",
     logo:'/company/makeen.png',
   },
@@ -292,7 +292,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: 'proje/wApp.png',
+    image: 'wApp.png',
     source_code_link: "https://github.com/nitam1319/Weather-App.git",
     logo: github
   },
