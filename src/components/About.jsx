@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import ProgressBar from "@ramonak/react-progress-bar";
@@ -7,12 +7,13 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { StarsCanvas } from "./canvas";
+import { useMediaQuery } from "@mui/material";
 
 const ServiceCard = ({ index, title, icon, num }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+        variants={fadeIn("right", "spring", index * 0.5, 0.75 ,useMediaQuery('(max-width:600px)'))}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
@@ -51,18 +52,24 @@ const ServiceCard = ({ index, title, icon, num }) => {
 };
 
 const About = () => {
+
+  
+ console.log('gg' , useMediaQuery('(max-width:600px)') )
   return (
     <>
         <StarsCanvas />
 
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant(0 , useMediaQuery('(max-width:600px)'))}
+       className=" mb:opacity-100"
+       style={{opacity:100}}
+      >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        variants={fadeIn("", "", 0.1, 1 , useMediaQuery('(max-width:600px)'))}
+        className="mt-0 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a web application developer proficient in topics such as TypeScript,
         JavaScript, React Js, Next Js and Redux Toolkit. I am a fast learner and
