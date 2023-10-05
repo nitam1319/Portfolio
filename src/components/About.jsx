@@ -57,6 +57,7 @@ const About = () => {
         <StarsCanvas />
 
       <motion.div variants={textVariant(0 , useMediaQuery('(max-width:600px)'))}
+      className="mt-24"
       >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -64,7 +65,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1 , useMediaQuery('(max-width:600px)'))}
-        className="mt-0 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a web application developer proficient in topics such as TypeScript,
         JavaScript, React Js, Next Js and Redux Toolkit. I am a fast learner and
