@@ -103,6 +103,21 @@ const services = [
     icon: '/skils/Axios.png',
     num : 65
   },
+  {
+    title: "Bootstrap 5",
+    icon: '/skils/bootstrap.png',
+    num : 75
+  },
+  {
+    title: "PWA",
+    icon: '/skils/pwa.png',
+    num : 70
+  },
+  {
+    title: "Webpack",
+    icon: '/skils/webpack.png',
+    num : 50
+  },
 ];
 
 const technologies = [
